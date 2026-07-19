@@ -289,7 +289,33 @@ document.getElementById("studentName").innerHTML=data.name;
 
 function claimScholarship(){
 
+const scholarshipId = prompt("আপনার Scholarship ID লিখুন");
+
+if(!scholarshipId){
+
+alert("Scholarship ID লিখুন");
+
+return;
+
+}
+
+fetch("https://script.google.com/macros/s/AKfycbwxMl83VXEWvPycOzza8er5OfV72IQyXQSOveA7SlCIXstVPJ097Hfd45HdJ7f9oA9Sag/exec?id="+id)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+if(data.status=="success"){
+
 window.location.href="https://www.gpa5reception.com/";
+
+}else{
+
+alert("❌ ভুল Scholarship ID");
+
+}
+
+});
 
 }
 
