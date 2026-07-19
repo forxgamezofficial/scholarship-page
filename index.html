@@ -279,7 +279,7 @@ const params = new URLSearchParams(window.location.search);
 
 const id = params.get("id");
 
-fetch("https://script.google.com/macros/s/AKfycbwxMl83VXEWvPycOzza8er5OfV72IQyXQSOveA7SlCIXstVPJ097Hfd45HdJ7f9oA9Sag/exec?id="+id)
+fetch("https://script.google.com/macros/s/AKfycbxzIvYgOqRkBtMMVHmYuNbrU3PA6_ezQ7SuDzNRMxiAHFo642K5Oamyk_HacfXO_CxeQQ/exec?id="+id)
 .then(res=>res.json())
 .then(data=>{
 
@@ -299,7 +299,7 @@ return;
 
 }
 
-fetch("https://script.google.com/macros/s/AKfycbwxMl83VXEWvPycOzza8er5OfV72IQyXQSOveA7SlCIXstVPJ097Hfd45HdJ7f9oA9Sag/exec?id="+id)
+fetch("https://script.google.com/macros/s/AKfycbxzIvYgOqRkBtMMVHmYuNbrU3PA6_ezQ7SuDzNRMxiAHFo642K5Oamyk_HacfXO_CxeQQ/exec?action=verify&id="+id+"&scholarship="+encodeURIComponent(scholarshipId))
 
 .then(res=>res.json())
 
