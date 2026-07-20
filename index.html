@@ -58,6 +58,14 @@ background-size: cover;
     flex-wrap:wrap;
 }
 
+    .prothom-logo{
+height:90px;
+}
+
+.shikho-logo{
+height:70px;
+}
+
 .logo img{
     height:90px;
     width:auto;
@@ -127,35 +135,58 @@ p{
 
 /* Notice */
 .notice{
-    background:#FFF5E8;
-    border-left:5px solid #FFB84D;
-    padding:18px;
-    border-radius:12px;
-    color:#6B7280;
-    margin-bottom:25px;
-    text-align:left;
-}
 
+background:#F8FAFF;
+
+border-left:5px solid #4F63FF;
+
+padding:22px;
+
+border-radius:18px;
+
+color:#555;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+text-align:left;
+
+}
 
 
 /* Button */
 button{
-    width:100%;
-    background:#4F63FF;
-    color:#fff;
-    border:none;
-    padding:18px;
-    border-radius:14px;
-    font-size:18px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s ease;
+
+width:100%;
+
+padding:18px;
+
+font-size:18px;
+
+font-weight:600;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+background:linear-gradient(
+90deg,
+#315CFF,
+#5B7CFF);
+
+transition:.3s;
+
 }
 
 button:hover{
-    background:#3247F6;
-    transform:translateY(-2px);
-    box-shadow:0 10px 25px rgba(79,99,255,.25);
+
+transform:translateY(-2px);
+
+box-shadow:0 15px 35px rgba(49,92,255,.28);
+
 }
 
 /* Footer */
@@ -167,26 +198,61 @@ footer{
 }
 
 /* Responsive */
+/* Responsive */
 @media(max-width:768px){
 
+    body{
+        padding:15px;
+    }
+
     .card{
-        padding:30px 20px;
+        padding:25px 18px;
+        border-radius:20px;
     }
 
     h1{
-        font-size:30px;
+        font-size:28px;
+        line-height:1.4;
     }
 
     p{
-        font-size:16px;
+        font-size:15px;
+        line-height:1.7;
     }
 
     .logo{
-        gap:20px;
+        gap:15px;
     }
 
-    .logo img{
+    .prothom-logo{
+        height:60px;
+    }
+
+    .shikho-logo{
         height:45px;
+    }
+
+    .offer{
+        padding:18px;
+    }
+
+    .offer li{
+        font-size:15px;
+        padding:12px;
+    }
+
+    button{
+        padding:16px;
+        font-size:17px;
+    }
+
+    .modal-box{
+        width:95%;
+        padding:25px 20px;
+    }
+
+    .modal-buttons{
+        flex-direction:column;
     }
 
 }
@@ -296,66 +362,78 @@ background:#D1D5DB;
 <div class="card">
 
 <div class="logo">
-    
 
-    <div style="
-display:inline-block;
-background:#00a651;
-color:#fff;
-padding:8px 20px;
-border-radius:30px;
-font-size:14px;
-margin-bottom:25px;
-font-weight:bold;
-">
+<img src="prothomalo-logo.png" class="prothom-logo">
 
-🎓 SSC Scholarship 2026
-
-</div>
-
-<img src="shikho-logo.png" alt="Shikho">
-
-<img src="prothomalo-logo.png" alt="Prothom Alo">
+<img src="shikho-logo.png" class="shikho-logo">
 
 </div>
 
 <h1>
-🎉 অভিনন্দন,
+
+অভিনন্দন,
+
 <br>
+
 <span class="name" id="studentName">
-ভেরিফাই করা হচ্ছে
+
+ভেরিফাই করা হচ্ছে...
+
 </span>
+
 </h1>
 
 <p>
 
-তুমি আমাদের ২ মাসব্যাপী <strong>SSC স্কলারশিপ শিক্ষাসহায়তা কর্মসূচির</strong>
-জন্য নির্বাচিত হয়েছো।
+আপনি Shikho ও Prothom Alo-এর যৌথ উদ্যোগে পরিচালিত
 
-তোমার স্কলারশিপ অফারটি সক্রিয় করতে নিচের বাটনে ক্লিক করো।
+<strong>SSC Scholarship Education Support Program 2026</strong>
+
+-এর জন্য প্রাথমিকভাবে নির্বাচিত হয়েছেন।
+
+<br><br>
+
+এই Scholarship আপনার একাডেমিক প্রস্তুতিকে আরও কার্যকর করতে বিশেষভাবে প্রদান করা হচ্ছে।
+
+Scholarship সক্রিয় করতে নিচের বাটনে ক্লিক করুন।
 
 </p>
 <div class="offer">
 
-<h3 style="margin-bottom:15px;color:#222;">
-🎁 তোমার স্কলারশিপে যা থাকছে
+<h3 style="margin-bottom:18px;color:#163A8A;">
+আপনার Scholarship-এ যা যা অন্তর্ভুক্ত থাকবে
 </h3>
 
 <ul>
 
-<li>📚 ২ মাস সম্পূর্ণ ফ্রি ক্লাস</li>
+<li>🚀 Think AI (Powered by Meta) কোর্সে সম্পূর্ণ অ্যাক্সেস</li>
 
-<li>🎥 লাইভ ও রেকর্ডেড ক্লাস</li>
+<li>💻 Practical AI কোর্সের Live + Recorded ক্লাস</li>
 
-<li>📝 ক্লাস নোট PDF</li>
+<li>🎯 দুরন্ত HSC '28 Foundation Program-এ অংশগ্রহণের সুযোগ</li>
 
-<li>📊 সাপ্তাহিক পরীক্ষা</li>
+<li>📚 Premium Class Notes, PDF ও Learning Resources</li>
 
-<li>👨‍🏫 একাডেমিক মেন্টর সাপোর্ট</li>
+<li>📝 Daily Practice MCQ ও নিয়মিত মূল্যায়ন</li>
 
-<li>❓ প্রশ্নোত্তর সহায়তা</li>
+<li>👨‍🏫 একাডেমিক Mentor Support ও প্রশ্নোত্তর সহায়তা</li>
+
+<li>🎓 SSC থেকে HSC পর্যন্ত ধারাবাহিক প্রস্তুতির নির্দেশনা</li>
+
+<li>🏆 Scholarship মেয়াদকাল জুড়ে সকল সুবিধা ব্যবহারের সুযোগ</li>
 
 </ul>
+</div>
+
+    <div class="notice">
+
+<strong>তোমার পরিশ্রমই তোমার সবচেয়ে বড় শক্তি।</strong>
+
+<br><br>
+
+এই Scholarship তোমার শেখার যাত্রাকে আরও সহজ করার জন্য।
+
+নিয়মিত অনুশীলন, লাইভ ক্লাস এবং সঠিক দিকনির্দেশনা তোমাকে কাঙ্ক্ষিত লক্ষ্যে পৌঁছাতে সহায়তা করবে।
 
 </div>
 
@@ -365,7 +443,13 @@ font-weight:bold;
 
 <footer>
 
-এই অফারটি সীমিত সময়ের জন্য প্রযোজ্য।
+Scholarship সুবিধা সীমিত সংখ্যক শিক্ষার্থীর জন্য প্রযোজ্য।
+
+<br><br>
+
+Powered by
+
+<strong>Shikho × Prothom Alo</strong>
 
 </footer>
 
@@ -425,12 +509,24 @@ function verifyScholarship(){
   <div class="modal-box">
     <h2>🎓 Scholarship Verification</h2>
 
-    <p>আপনার Scholarship ID লিখুন</p>
+  <p>
+
+Scholarship Activation সম্পন্ন করতে
+
+আপনার Scholarship ID লিখুন।
+
+</p>
 
     <input
       type="text"
       id="scholarshipInput"
       placeholder="যেমন: SSC2026-12345">
+
+      <div style="font-size:13px;color:#777;margin-top:-10px;margin-bottom:20px;">
+
+🔒 আপনার Scholarship ID নিরাপদভাবে যাচাই করা হবে।
+
+</div>
 
     <div class="modal-buttons">
       <button class="cancel-btn" onclick="closeModal()">বাতিল</button>
