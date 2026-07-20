@@ -190,6 +190,103 @@ footer{
     }
 
 }
+
+
+    .modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(6px);
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.modal-box{
+width:420px;
+max-width:90%;
+background:#fff;
+padding:35px;
+border-radius:22px;
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+text-align:center;
+animation:popup .25s ease;
+}
+
+@keyframes popup{
+from{
+transform:scale(.9);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.modal-box h2{
+margin-bottom:12px;
+color:#163A8A;
+}
+
+.modal-box p{
+margin-bottom:20px;
+font-size:15px;
+color:#666;
+}
+
+.modal-box input{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:16px;
+outline:none;
+margin-bottom:22px;
+}
+
+.modal-box input:focus{
+border-color:#4F63FF;
+box-shadow:0 0 0 4px rgba(79,99,255,.12);
+}
+
+.modal-buttons{
+display:flex;
+gap:12px;
+}
+
+.cancel-btn{
+background:#E5E7EB;
+color:#333;
+}
+
+.verify-btn{
+background:#4F63FF;
+color:#fff;
+}
+
+.cancel-btn,.verify-btn{
+flex:1;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.25s;
+}
+
+.verify-btn:hover{
+background:#3247F6;
+}
+
+.cancel-btn:hover{
+background:#D1D5DB;
+}
 </style>
 
 </head>
@@ -289,39 +386,58 @@ document.getElementById("studentName").innerHTML=data.name;
 });
 
 function claimScholarship(){
-
-const scholarshipId = prompt("আপনার Scholarship ID লিখুন");
-
-if(!scholarshipId){
-
-alert("Scholarship ID লিখুন");
-
-return;
-
+    document.getElementById("claimModal").style.display="flex";
 }
 
-fetch("https://script.google.com/macros/s/AKfycbxzIvYgOqRkBtMMVHmYuNbrU3PA6_ezQ7SuDzNRMxiAHFo642K5Oamyk_HacfXO_CxeQQ/exec?action=verify&id="+id+"&scholarship="+encodeURIComponent(scholarshipId))
-
-.then(res=>res.json())
-
-.then(data=>{
-
-if(data.status=="success"){
-
-window.location.href = "https://www.gpa5reception.com/";
-
-}else{
-
-alert("❌ ভুল Scholarship ID");
-
+function closeModal(){
+    document.getElementById("claimModal").style.display="none";
 }
 
-});
+function verifyScholarship(){
+
+    const scholarshipId=document.getElementById("scholarshipInput").value.trim();
+
+    if(!scholarshipId){
+        alert("Scholarship ID লিখুন");
+        return;
+    }
+
+    fetch("https://script.google.com/macros/s/AKfycbxzIvYgOqRkBtMMVHmYuNbrU3PA6_ezQ7SuDzNRMxiAHFo642K5Oamyk_HacfXO_CxeQQ/exec?action=verify&id="+id+"&scholarship="+encodeURIComponent(scholarshipId))
+
+    .then(res=>res.json())
+
+    .then(data=>{
+
+        if(data.status=="success"){
+            window.location.href="https://www.gpa5reception.com/";
+        }else{
+            alert("❌ ভুল Scholarship ID");
+        }
+
+    });
 
 }
 
 </script>
 
+
+    <div id="claimModal" class="modal">
+  <div class="modal-box">
+    <h2>🎓 Scholarship Verification</h2>
+
+    <p>আপনার Scholarship ID লিখুন</p>
+
+    <input
+      type="text"
+      id="scholarshipInput"
+      placeholder="যেমন: SSC2026-12345">
+
+    <div class="modal-buttons">
+      <button class="cancel-btn" onclick="closeModal()">বাতিল</button>
+      <button class="verify-btn" onclick="verifyScholarship()">যাচাই করুন</button>
+    </div>
+  </div>
+</div>
 
 
 </body>
