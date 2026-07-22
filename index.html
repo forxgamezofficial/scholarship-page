@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,7 +17,7 @@ font-family:Arial,sans-serif;
 
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
- 
+
 *{
     margin:0;
     padding:0;
@@ -26,94 +26,35 @@ font-family:Arial,sans-serif;
 
 body{
     font-family:'Poppins',sans-serif;
-    background:
-    radial-gradient(circle at top left,#7C4DFF22,transparent 35%),
-    radial-gradient(circle at top right,#FF6B3522,transparent 30%),
-    linear-gradient(135deg,#EEF3FF,#FDFBFF,#F4F7FF);
-    min-height:100vh;
+  background: url("bg.jpg") no-repeat center center fixed;
+background-size: cover;
+    color:#1F2937;
     display:flex;
     justify-content:center;
     align-items:center;
+    min-height:100vh;
     padding:30px;
-    color:#1F2937;
 }
 
 /* Main Card */
 .card{
-    width:100%;
     max-width:760px;
-
-    background:rgba(255,255,255,.96);
-
-    border:1px solid rgba(255,255,255,.6);
-
-    backdrop-filter:blur(20px);
-
-    border-radius:34px;
-
-    padding:50px;
-
-    box-shadow:
-    0 25px 80px rgba(40,60,140,.12),
-    inset 0 1px rgba(255,255,255,.8);
-
-    position:relative;
-
-    overflow:hidden;
+    width:100%;
+    background:#FFFFFF;
+    border-radius:24px;
+    border:1px solid #E8EDF7;
+    box-shadow:0 12px 35px rgba(22,34,78,.08);
+    padding:45px;
+    text-align:center;
 }
 
-
-    .card:before{
-
-content:"";
-
-position:absolute;
-
-width:280px;
-
-height:280px;
-
-background:linear-gradient(135deg,#5B5FFF,#FF6B35);
-
-opacity:.08;
-
-border-radius:50%;
-
-top:-140px;
-
-right:-140px;
-
-}
-
-
-    .card:after{
-
-content:"";
-
-position:absolute;
-
-width:220px;
-
-height:220px;
-
-background:#5B5FFF;
-
-opacity:.05;
-
-border-radius:50%;
-
-left:-120px;
-
-bottom:-120px;
-
-}
 /* Logo */
 .logo{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:45px;
-    margin-bottom:35px;
+    gap:35px;
+    margin-bottom:25px;
     flex-wrap:wrap;
 }
 
@@ -145,194 +86,117 @@ height:70px;
 
 /* Heading */
 h1{
-
-font-size:48px;
-
-font-weight:800;
-
-color:#143A8B;
-
-line-height:1.25;
-
-margin-bottom:18px;
+    font-size:38px;
+    color:#163A8A;
+    font-weight:700;
+    margin-bottom:18px;
+    line-height:1.3;
 }
 
 .name{
-
-background:linear-gradient(90deg,#FF7A18,#FF4E50,#8A2BE2);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-font-weight:800;
-
-font-size:46px;
-
-letter-spacing:.5px;
-
+    color:#FF6B35;
 }
 
 /* Paragraph */
 p{
-
-font-size:18px;
-
-line-height:1.9;
-
-color:#586174;
-
-margin-bottom:35px;
-
+    font-size:17px;
+    line-height:1.8;
+    color:#5B6475;
+    margin-bottom:30px;
 }
 
 /* Offer Box */
 .offer{
-
-background:linear-gradient(180deg,#F7F9FF,#FFFFFF);
-
-border:1px solid #DDE5FF;
-
-border-radius:22px;
-
-padding:28px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.04);
-
-margin-bottom:30px;
-
+    background:#F8FAFF;
+    border:1px solid #E4EBFF;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    text-align:left;
 }
+
 .offer h3{
-
-display:inline-block;
-
-padding:12px 22px;
-
-border-radius:14px;
-
-background:linear-gradient(90deg,#6C63FF,#C850FF);
-
-color:white;
-
-font-size:18px;
-
-margin-bottom:20px;
-
+    color:#163A8A;
+    margin-bottom:15px;
 }
+
 .offer ul{
     list-style:none;
 }
 
 .offer li{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-padding:16px 18px;
-
-margin:12px 0;
-
-background:white;
-
-border-radius:16px;
-
-border:1px solid #EEF2FF;
-
-transition:.35s;
-
-box-shadow:
-
-0 8px 18px rgba(0,0,0,.03);
-
+    padding:12px 15px;
+    margin:10px 0;
+    background:#fff;
+    border-radius:12px;
+    border:1px solid #EEF2FF;
+    box-shadow:0 3px 12px rgba(0,0,0,.03);
 }
 
-
-    .offer li:hover{
-
-transform:translateX(6px);
-
-box-shadow:
-
-0 15px 35px rgba(92,98,255,.12);
-
-border-color:#7A6DFF;
-
-}
-
-    
 /* Notice */
 .notice{
 
-background:linear-gradient(135deg,#FFFFFF,#F7F5FF);
+background:#F8FAFF;
 
-border-left:6px solid #6B63FF;
+border-left:5px solid #4F63FF;
 
-border-radius:20px;
-
-padding:28px;
-
-box-shadow:0 12px 30px rgba(0,0,0,.04);
-
-}
-
-
-.card > button{
-
-width:100%;
-
-padding:20px;
-
-border:none;
+padding:22px;
 
 border-radius:18px;
 
-font-size:20px;
+color:#555;
 
-font-weight:700;
+line-height:1.8;
 
-cursor:pointer;
+margin-bottom:30px;
 
-color:white;
-
-background:linear-gradient(
-90deg,
-#5B5FFF,
-#7B4DFF,
-#FF6B35);
-
-background-size:250%;
-
-transition:.4s;
-
-box-shadow:
-0 18px 45px rgba(90,95,255,.35);
+text-align:left;
 
 }
 
-.card > button:hover{
 
-background-position:right;
+/* Button */
+button{
 
-transform:translateY(-4px);
+width:100%;
 
-box-shadow:
-0 28px 55px rgba(90,95,255,.45);
+padding:18px;
+
+font-size:18px;
+
+font-weight:600;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+background:linear-gradient(
+90deg,
+#315CFF,
+#5B7CFF);
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 15px 35px rgba(49,92,255,.28);
 
 }
 
 /* Footer */
 footer{
-
-margin-top:35px;
-
-font-size:13px;
-
-color:#9AA3B2;
-
+    margin-top:30px;
+    color:#8A94A6;
+    font-size:14px;
+    line-height:1.6;
 }
+
 /* Responsive */
 /* Responsive */
 @media(max-width:768px){
@@ -382,21 +246,10 @@ color:#9AA3B2;
         font-size:17px;
     }
 
- .modal-box{
-
-background:rgba(255,255,255,.97);
-
-backdrop-filter:blur(20px);
-
-border-radius:28px;
-
-padding:40px;
-
-box-shadow:
-
-0 30px 80px rgba(0,0,0,.22);
-
-}
+    .modal-box{
+        width:95%;
+        padding:25px 20px;
+    }
 
     .modal-buttons{
         flex-direction:column;
@@ -453,21 +306,18 @@ color:#666;
 }
 
 .modal-box input{
-
-padding:16px;
-
-border-radius:15px;
-
-border:2px solid #E5E7FF;
-
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:16px;
+outline:none;
+margin-bottom:22px;
 }
 
 .modal-box input:focus{
-
-border-color:#6C63FF;
-
-box-shadow:0 0 0 5px rgba(108,99,255,.12);
-
+border-color:#4F63FF;
+box-shadow:0 0 0 4px rgba(79,99,255,.12);
 }
 
 .modal-buttons{
@@ -503,125 +353,6 @@ background:#3247F6;
 .cancel-btn:hover{
 background:#D1D5DB;
 }
-
- .floating-stars{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:0;
-}
-
-.floating-stars span{
-    position:absolute;
-    font-size:22px;
-    animation:floatStar linear infinite;
-    opacity:.8;
-}
-
-.floating-stars span:nth-child(1){
-left:8%;
-animation-duration:8s;
-animation-delay:0s;
-}
-
-.floating-stars span:nth-child(2){
-left:22%;
-animation-duration:11s;
-animation-delay:2s;
-}
-
-.floating-stars span:nth-child(3){
-left:45%;
-animation-duration:10s;
-animation-delay:4s;
-}
-
-.floating-stars span:nth-child(4){
-left:63%;
-animation-duration:9s;
-animation-delay:1s;
-}
-
-.floating-stars span:nth-child(5){
-left:82%;
-animation-duration:12s;
-animation-delay:5s;
-}
-
-.floating-stars span:nth-child(6){
-left:95%;
-animation-duration:9s;
-animation-delay:3s;
-}
-
-@keyframes floatStar{
-
-0%{
-transform:translateY(110vh) rotate(0deg);
-opacity:0;
-}
-
-20%{
-opacity:1;
-}
-
-80%{
-opacity:1;
-}
-
-100%{
-transform:translateY(-120px) rotate(360deg);
-opacity:0;
-}
-
-}
-
- .offer-timer{
-
-margin-bottom:22px;
-
-padding:18px;
-
-border-radius:18px;
-
-background:linear-gradient(135deg,#FF6B35,#FF9A3C);
-
-color:white;
-
-text-align:center;
-
-box-shadow:0 15px 35px rgba(255,107,53,.35);
-
-animation:pulse 2s infinite;
-
-}
-
-.offer-timer strong{
-
-font-size:18px;
-
-display:block;
-
-margin-bottom:8px;
-
-}
-
-#offerCountdown{
-
-font-size:22px;
-
-font-weight:700;
-
-}
-
-@keyframes pulse{
-
-0%{transform:scale(1);}
-50%{transform:scale(1.03);}
-100%{transform:scale(1);}
-
-}
 </style>
 
 </head>
@@ -654,32 +385,23 @@ font-weight:700;
 
 <p>
 
-তুমি Shikho ও Prothom Alo-এর যৌথ উদ্যোগে পরিচালিত
+আপনি Shikho ও Prothom Alo-এর যৌথ উদ্যোগে পরিচালিত
 
 <strong>SSC Scholarship Education Support Program 2026</strong>
 
--এর জন্য প্রাথমিকভাবে নির্বাচিত হয়েছ।
+-এর জন্য প্রাথমিকভাবে নির্বাচিত হয়েছেন।
 
 <br><br>
 
-এই Scholarship তোমার একাডেমিক প্রস্তুতিকে আরও কার্যকর করতে বিশেষভাবে প্রদান করা হয়েছে।
+এই Scholarship আপনার একাডেমিক প্রস্তুতিকে আরও কার্যকর করতে বিশেষভাবে প্রদান করা হচ্ছে।
 
-Scholarship সক্রিয় করতে নিচের বাটনে ক্লিক করো।
+Scholarship সক্রিয় করতে নিচের বাটনে ক্লিক করুন।
 
 </p>
-
- <div class="offer-timer">
-
-🔥 <strong>Limited Time Scholarship Offer</strong>
-
-<div id="offerCountdown"></div>
-
-</div>
-
 <div class="offer">
 
 <h3 style="margin-bottom:18px;color:#163A8A;">
-তোমার Scholarship-এ যা যা অন্তর্ভুক্ত থাকবে
+আপনার Scholarship-এ যা যা অন্তর্ভুক্ত থাকবে
 </h3>
 
 <ul>
@@ -701,10 +423,9 @@ Scholarship সক্রিয় করতে নিচের বাটনে ক�
 <li>🏆 Scholarship মেয়াদকাল জুড়ে সকল সুবিধা ব্যবহারের সুযোগ</li>
 
 </ul>
-
 </div>
 
-<div class="notice">
+    <div class="notice">
 
 <strong>তোমার পরিশ্রমই তোমার সবচেয়ে বড় শক্তি।</strong>
 
@@ -761,7 +482,7 @@ function verifyScholarship(){
     const scholarshipId=document.getElementById("scholarshipInput").value.trim();
 
     if(!scholarshipId){
-        alert("Scholarship ID লিখো");
+        alert("Scholarship ID লিখুন");
         return;
     }
 
@@ -781,38 +502,6 @@ function verifyScholarship(){
 
 }
 
- const offerEnd = new Date("2026-07-25T23:59:00").getTime();
-
-const timer=setInterval(function(){
-
-const now=new Date().getTime();
-
-const distance=offerEnd-now;
-
-if(distance<0){
-
-document.getElementById("offerCountdown").innerHTML="⛔ অফার শেষ হয়েছে";
-
-clearInterval(timer);
-
-return;
-
-}
-
-const days=Math.floor(distance/(1000*60*60*24));
-
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-
-const seconds=Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("offerCountdown").innerHTML=
-
-days+" দিন "+hours+" ঘণ্টা "+minutes+" মিনিট "+seconds+" সেকেন্ড";
-
-},1000);
-
 </script>
 
 
@@ -824,34 +513,28 @@ days+" দিন "+hours+" ঘণ্টা "+minutes+" মিনিট "+seconds
 
 Scholarship Activation সম্পন্ন করতে
 
-তোমার Scholarship ID লিখো।
+আপনার Scholarship ID লিখুন।
+
 </p>
 
     <input
       type="text"
       id="scholarshipInput"
-      placeholder="তোমার Scholarship ID লিখো">
+      placeholder="যেমন: SSC2026-12345">
 
       <div style="font-size:13px;color:#777;margin-top:-10px;margin-bottom:20px;">
 
-🔒 তোমার Scholarship ID নিরাপদভাবে যাচাই করা হবে।
+🔒 আপনার Scholarship ID নিরাপদভাবে যাচাই করা হবে।
 
 </div>
 
     <div class="modal-buttons">
       <button class="cancel-btn" onclick="closeModal()">বাতিল</button>
-      <button class="verify-btn" onclick="verifyScholarship()">যাচাই করো</button>
+      <button class="verify-btn" onclick="verifyScholarship()">যাচাই করুন</button>
     </div>
   </div>
 </div>
-<div class="floating-stars">
-    <span>✨</span>
-    <span>⭐</span>
-    <span>✨</span>
-    <span>🌟</span>
-    <span>⭐</span>
-    <span>✨</span>
-</div>
+
 
 </body>
 </html>
