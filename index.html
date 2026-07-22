@@ -17,7 +17,7 @@ font-family:Arial,sans-serif;
 
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
+ 
 *{
     margin:0;
     padding:0;
@@ -279,8 +279,7 @@ box-shadow:0 12px 30px rgba(0,0,0,.04);
 }
 
 
-/* Button */
-button{
+.card > button{
 
 width:100%;
 
@@ -309,19 +308,17 @@ background-size:250%;
 transition:.4s;
 
 box-shadow:
-
 0 18px 45px rgba(90,95,255,.35);
 
 }
 
-button:hover{
+.card > button:hover{
 
 background-position:right;
 
 transform:translateY(-4px);
 
 box-shadow:
-
 0 28px 55px rgba(90,95,255,.45);
 
 }
@@ -674,7 +671,7 @@ Scholarship Activation সম্পন্ন করতে
     <input
       type="text"
       id="scholarshipInput"
-      placeholder="যেমন: SSC2026-12345">
+      placeholder="তোমার Scholarship ID লিখো">
 
       <div style="font-size:13px;color:#777;margin-top:-10px;margin-bottom:20px;">
 
@@ -684,7 +681,7 @@ Scholarship Activation সম্পন্ন করতে
 
     <div class="modal-buttons">
       <button class="cancel-btn" onclick="closeModal()">বাতিল</button>
-      <button class="verify-btn" onclick="verifyScholarship()">যাচাই করুন</button>
+      <button class="verify-btn" onclick="verifyScholarship()">যাচাই করো</button>
     </div>
   </div>
 </div>
