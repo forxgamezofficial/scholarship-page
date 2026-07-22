@@ -109,11 +109,12 @@ bottom:-120px;
 }
 /* Logo */
 .logo{
-
-margin-bottom:35px;
-
-gap:45px;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    margin-bottom:35px;
+    flex-wrap:wrap;
 }
 
     .prothom-logo{
@@ -154,6 +155,7 @@ color:#143A8B;
 line-height:1.25;
 
 margin-bottom:18px;
+}
 
 .name{
 
@@ -635,7 +637,7 @@ function verifyScholarship(){
     const scholarshipId=document.getElementById("scholarshipInput").value.trim();
 
     if(!scholarshipId){
-        alert("Scholarship ID লিখুন");
+        alert("Scholarship ID লিখো");
         return;
     }
 
@@ -666,8 +668,7 @@ function verifyScholarship(){
 
 Scholarship Activation সম্পন্ন করতে
 
-আপনার Scholarship ID লিখুন।
-
+তোমার Scholarship ID লিখো।
 </p>
 
     <input
@@ -677,7 +678,7 @@ Scholarship Activation সম্পন্ন করতে
 
       <div style="font-size:13px;color:#777;margin-top:-10px;margin-bottom:20px;">
 
-🔒 আপনার Scholarship ID নিরাপদভাবে যাচাই করা হবে।
+🔒 তোমার Scholarship ID নিরাপদভাবে যাচাই করা হবে।
 
 </div>
 
