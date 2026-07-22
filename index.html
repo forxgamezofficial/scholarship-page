@@ -503,6 +503,125 @@ background:#3247F6;
 .cancel-btn:hover{
 background:#D1D5DB;
 }
+
+ .floating-stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+.floating-stars span{
+    position:absolute;
+    font-size:22px;
+    animation:floatStar linear infinite;
+    opacity:.8;
+}
+
+.floating-stars span:nth-child(1){
+left:8%;
+animation-duration:8s;
+animation-delay:0s;
+}
+
+.floating-stars span:nth-child(2){
+left:22%;
+animation-duration:11s;
+animation-delay:2s;
+}
+
+.floating-stars span:nth-child(3){
+left:45%;
+animation-duration:10s;
+animation-delay:4s;
+}
+
+.floating-stars span:nth-child(4){
+left:63%;
+animation-duration:9s;
+animation-delay:1s;
+}
+
+.floating-stars span:nth-child(5){
+left:82%;
+animation-duration:12s;
+animation-delay:5s;
+}
+
+.floating-stars span:nth-child(6){
+left:95%;
+animation-duration:9s;
+animation-delay:3s;
+}
+
+@keyframes floatStar{
+
+0%{
+transform:translateY(110vh) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120px) rotate(360deg);
+opacity:0;
+}
+
+}
+
+ .offer-timer{
+
+margin-bottom:22px;
+
+padding:18px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#FF6B35,#FF9A3C);
+
+color:white;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(255,107,53,.35);
+
+animation:pulse 2s infinite;
+
+}
+
+.offer-timer strong{
+
+font-size:18px;
+
+display:block;
+
+margin-bottom:8px;
+
+}
+
+#offerCountdown{
+
+font-size:22px;
+
+font-weight:700;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.03);}
+100%{transform:scale(1);}
+
+}
 </style>
 
 </head>
@@ -548,6 +667,14 @@ background:#D1D5DB;
 Scholarship সক্রিয় করতে নিচের বাটনে ক্লিক করো।
 
 </p>
+
+ <div class="offer-timer">
+
+🔥 <strong>Limited Time Scholarship Offer</strong>
+
+<div id="offerCountdown"></div>
+
+</div>
 
 <div class="offer">
 
@@ -654,6 +781,38 @@ function verifyScholarship(){
 
 }
 
+ const offerEnd = new Date("2026-07-25T23:59:00").getTime();
+
+const timer=setInterval(function(){
+
+const now=new Date().getTime();
+
+const distance=offerEnd-now;
+
+if(distance<0){
+
+document.getElementById("offerCountdown").innerHTML="⛔ অফার শেষ হয়েছে";
+
+clearInterval(timer);
+
+return;
+
+}
+
+const days=Math.floor(distance/(1000*60*60*24));
+
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("offerCountdown").innerHTML=
+
+days+" দিন "+hours+" ঘণ্টা "+minutes+" মিনিট "+seconds+" সেকেন্ড";
+
+},1000);
+
 </script>
 
 
@@ -685,7 +844,14 @@ Scholarship Activation সম্পন্ন করতে
     </div>
   </div>
 </div>
-
+<div class="floating-stars">
+    <span>✨</span>
+    <span>⭐</span>
+    <span>✨</span>
+    <span>🌟</span>
+    <span>⭐</span>
+    <span>✨</span>
+</div>
 
 </body>
 </html>
